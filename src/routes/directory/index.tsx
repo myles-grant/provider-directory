@@ -5,7 +5,7 @@ import { Header } from "../../components/library/atoms/text/header";
 import { Card } from "../../components/library/organism/card";
 import { fetchProviders, fetchProvider } from "../../scripts/api"
 import { Provider } from "../../interfaces/provider";
-import { LoadingSpinner } from "../../components/library/molecules/LoadingSpinner";
+import { LoadingSpinner } from "../../components/library/molecules/loading-spinner";
 import { Label } from "../../components/library/atoms/text/label";
 import { List } from "../../components/library/organism/list";
 import { Image } from "../../components/library/atoms/image";
