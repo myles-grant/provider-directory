@@ -84,7 +84,7 @@ export default function ProfilePage() {
                                                 </div>
                                             </div>
                                         )} />
-                                    <Button className="mt-3">Book with us</Button>
+                                    <Button className="mt-3 w-full">Book with us</Button>
                                 </div>
                             </div>
                         </div>
