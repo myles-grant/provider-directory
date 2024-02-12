@@ -19,7 +19,6 @@ export default function ProfilePage() {
     const [profileDetails, setProfileDetails] = useState<Provider>()
 
     useEffect(() => {
-
         (async () => {
             if (params && params.profileId) {
                 try {
