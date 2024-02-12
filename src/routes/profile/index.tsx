@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { fetchProviders, fetchProvider } from "../../scripts/api"
+import { Provider } from "../../interfaces/provider";
 
 
 export default function ProfilePage() {
 
     const params = useParams();
-    console.log(JSON.stringify(params))
+    const [profileDetails, setProfileDetails] = useState<Provider>()
+
+    useEffect(() => {
+
+    }, [params])
+
     return (
         <>
         </> 
