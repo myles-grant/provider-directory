@@ -59,18 +59,27 @@ export default function ProfilePage() {
                                     <CollapseView
                                         collapseView={<div />}
                                         expandedView={(
-                                            <div className="flex flex-col">
-                                                <div className="flex flex-col">
-                                                    <Label>Location</Label>
-                                                    <Body size="4">{profileDetails?.location}</Body>
+                                            <div>
+                                                <div className="flex flex-row">
+                                                    <Image className="mr-2" src={"MapIcon"} />
+                                                    <div className="flex flex-col">
+                                                        <Label>Location</Label>
+                                                        <Body size="4">{profileDetails?.location}</Body>
+                                                    </div>
                                                 </div>
-                                                <div className="flex flex-col">
-                                                    <Label>Education</Label>
-                                                    <Body size="4">{profileDetails?.education}</Body>
+                                                <div className="flex flex-row">
+                                                    <Image className="mr-2" src={"EducationIcon"} />
+                                                    <div className="flex flex-col">
+                                                        <Label>Education</Label>
+                                                        <Body size="4">{profileDetails?.education}</Body>
+                                                    </div>
                                                 </div>
-                                                <div className="flex flex-col">
-                                                    <Label size="4">Language</Label>
-                                                    <Body size="4">{profileDetails?.languages.join(", ")}</Body>
+                                                <div className="flex flex-row">
+                                                    <Image className="mr-2" src={"MapIcon"} />
+                                                    <div className="flex flex-col">
+                                                        <Label size="4">Language</Label>
+                                                        <Body size="4">{profileDetails?.languages.join(", ")}</Body>
+                                                    </div>
                                                 </div>
                                             </div>
                                         )} />
