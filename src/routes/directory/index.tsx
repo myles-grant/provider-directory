@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 import { Header } from "../../components/library/atoms/text/header";
 import { Card } from "../../components/library/organism/card";
@@ -13,21 +13,9 @@ import { Image } from "../../components/library/atoms/image";
 
 export default function DirectoryPage() {
 
-    const navigate = useNavigate();
+    const navigate = useNavigate()
+    const providers = useLoaderData() as Provider[]
     const [isLoading, setIsLoading] = useState(false)
-    const [providers, setProviders] = useState<Provider[]>([])
-
-    // Fetch Provider List
-    useEffect(() => {
-        (async () => {
-            setIsLoading(true)
-            const _providers = await fetchProviders()
-            if (_providers) {
-                setIsLoading(false)
-                setProviders(_providers)
-            }
-        })()
-    }, [])
 
     return (
         <div>

@@ -9,31 +9,19 @@ import { Image } from "../../components/library/atoms/image";
 import { Button } from "../../components/library/atoms/button/button";
 import { CollapseView } from "../../components/library/molecules/collapse-view";
 import { Label } from "../../components/library/atoms/text/label";
+import { useLoaderData } from "react-router-dom";
 
+
+export const loader = async ({ params }: any) => {
+    return await fetchProvider(params.profileId) 
+}
 
 export default function ProfilePage() {
 
     const params = useParams();
+    const profileDetails = useLoaderData() as Provider;
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState(false)
-    const [profileDetails, setProfileDetails] = useState<Provider>()
-
-    useEffect(() => {
-        (async () => {
-            if (params && params.profileId) {
-                try {
-                    setIsLoading(true)
-                    const details = await fetchProvider(params.profileId)
-                    console.log(details)
-                    setProfileDetails(details)
-                } catch (error) {
-                    setError(true)
-                } finally {
-                    setIsLoading(false)
-                }
-            }
-        })()
-    }, [params, params.profileId])
 
     return (
         <div>
@@ -45,7 +33,7 @@ export default function ProfilePage() {
                 ) : (
 
                     error ? (
-                        <div className="flex justify-center">  
+                        <div className="flex justify-center">
                             <Label>User Not Found</Label>
                         </div>
                     ) : (

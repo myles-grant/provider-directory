@@ -3,9 +3,12 @@ import {
 } from "react-router-dom";
 
 import ProviderDirectory from "./directory"
-import ProviderProfile from "./profile"
+import ProviderProfile, { loader as profileLoader } from "./profile"
 import ErrorPage from "./error";
 import RootPage from "./app";
+import { fetchProviders} from "../scripts/api"
+
+
 
 export default createBrowserRouter([
     {
@@ -15,10 +18,12 @@ export default createBrowserRouter([
         children: [
             {
                 path: "provider",
+                loader: fetchProviders,
                 element: <ProviderDirectory />
             },
             {
                 path: "provider/:profileId",
+                loader: profileLoader,
                 element: <ProviderProfile />
             }
         ]
