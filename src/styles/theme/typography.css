@@ -1,0 +1,46 @@
+:root {
+    --header-100: 32px;
+    --header-200: 28px;
+    --header-300: 24px;
+    --header-400: 20px;
+    --header-500: 18px;
+
+    --sub-header-100: 32px;
+    --sub-header-200: 28px;
+    --sub-header-300: 24px;
+    --sub-header-400: 20px;
+    --sub-header-500: 18px;
+
+    --body-100: 18px;
+    --body-200: 16px;
+    --body-300: 14.8px;
+    --body-400: 14px;
+    --body-500: 12px;
+    --body-600: 10px;
+
+    --button-100: 18px;
+    --button-200: 16px;
+    --button-300: 14px;
+    --button-400: 12px;
+
+    --label-100: 18px;
+    --label-200: 16px;
+    --label-300: 14.8px;
+    --label-400: 14px;
+    --label-500: 12px;
+    --label-600: 10px;
+
+    --input-100: 20px;
+    --input-200: 18px;
+    --input-300: 16px;
+    --input-400: 14.8px;
+    --input-500: 14px;
+    --input-600: 12px;
+
+    --link-100: 20px;
+    --link-200: 18px;
+    --link-300: 16px;
+    --link-400: 14.8px;
+    --link-500: 14px;
+    --link-600: 12px;
+}
