@@ -59,22 +59,22 @@ export default function ProfilePage() {
                                     <CollapseView
                                         collapseView={<div />}
                                         expandedView={(
-                                            <div>
-                                                <div className="flex flex-row">
+                                            <div className="ml-2">
+                                                <div className="flex flex-row mb-3">
                                                     <Image className="mr-2" src={"MapIcon"} />
                                                     <div className="flex flex-col">
                                                         <Label>Location</Label>
                                                         <Body size="4">{profileDetails?.location}</Body>
                                                     </div>
                                                 </div>
-                                                <div className="flex flex-row">
+                                                <div className="flex flex-row  mb-3">
                                                     <Image className="mr-2" src={"EducationIcon"} />
                                                     <div className="flex flex-col">
                                                         <Label>Education</Label>
                                                         <Body size="4">{profileDetails?.education}</Body>
                                                     </div>
                                                 </div>
-                                                <div className="flex flex-row">
+                                                <div className="flex flex-row  mb-3">
                                                     <Image className="mr-2" src={"MapIcon"} />
                                                     <div className="flex flex-col">
                                                         <Label size="4">Language</Label>
