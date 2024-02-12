@@ -37,6 +37,8 @@ export default function ProfilePage() {
                     </Card>
                     <div className="bg-white p-4 mb-3 rounded">
                         <CollapseView
+                            collapseLabel={"Read More"}
+                            expandedLabel={"Read Less"}
                             collapseView={<div />}
                             expandedView={(
                                 <div className="ml-2">
