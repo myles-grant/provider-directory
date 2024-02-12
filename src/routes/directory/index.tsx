@@ -12,7 +12,6 @@ import { Image } from "../../components/library/atoms/image";
 
 
 export default function DirectoryPage() {
-
     const navigate = useNavigate()
     const providers = useLoaderData() as Provider[]
     const [isLoading, setIsLoading] = useState(false)
