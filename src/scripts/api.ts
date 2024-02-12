@@ -14,7 +14,7 @@ const REQUEST_RESPONSE_TIME = 1000
  * @return {Promise<{id: string, name: string, title: string, avatarUrl: string, bio: string, }>}
  */
 export const fetchProvider = (providerId: string) => {
-  return new Promise(
+  return new Promise<Provider>(
     (resolve, reject) => setTimeout(
       () => {
         const [matchingProvider] = data.filter(({ id }) => id === providerId)
